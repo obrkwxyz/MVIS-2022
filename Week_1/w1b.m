@@ -1,6 +1,10 @@
 %w1b.m (resize the images - image resolution)
-close all, clear all, clc
+close all
+clear all
+clc
+
 X=imread('josh1c.bmp'); %256x256
+
 X1=imresize(X,1/2,'nearest');  %128x128
 X2=imresize(X,1/4,'nearest'); %64x64
 X3=imresize(X,1/8,'nearest'); %16x16

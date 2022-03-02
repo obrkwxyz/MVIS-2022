@@ -13,6 +13,7 @@ figure(1)
 
 impixel(WC,100,260) %individual pixel at (x,y)
 pause
+
 %check difference between calling image andd matrix element
 WC(100,260,:) % (y,x)
 WC(260,100,:) % (y,x)

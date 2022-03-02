@@ -1,5 +1,8 @@
 %w1i.m (first image processing technique)
-close all, clear all, clc
+close all
+clear all
+clc
+
 W=imread('light.tif');
 figure(1)
     imshow(W)
