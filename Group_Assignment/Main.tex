@@ -1,0 +1,44 @@
+%% Do not write in this file it is only used to include the source files and allows for quick rearranging of structure etc.
+
+
+%% Setup the title page here -- Change these
+\newcommand{\courseName}{Machine Learning \& Vision Systems}
+\newcommand{\courseCode}{MFET 4015}
+\newcommand{\dueDate}{12/04/22}
+\newcommand{\supervisors}{Professor Lee Sang-Heon\\ Md Ahasan Kabir}
+\newcommand{\submissionType}{Group Project}
+\newcommand{\submissionTitle}{Image Processing using MATLAB}
+\newcommand{\headerTitle}{\submissionTitle}
+%% Dont change the following
+\input{sections/fixed/preamble.tex}
+\begin{document}
+\pagenumbering{roman} %i,ii etc Page Numbers
+\input{sections/fixed/00_title.tex}\FloatBarrier
+\pagenumbering{arabic} % 1,2... etc Page Numbers
+
+%% Change This.
+
+\section{Introduction}
+\input{sections/01_introduction.tex}\FloatBarrier
+
+\clearpage\section{Background}
+% \input{sections/02_background.tex}\FloatBarrier
+\subsection{Background subsection 1}
+% \input{sections/02_background.tex}\FloatBarrier
+
+\clearpage\section{Conclusion}
+\input{sections/999_conclusion.tex}\FloatBarrier
+
+\clearpage
+%% Local main bibliography file. Adapt as required.
+%% This is using natbib as a backend for UniSA-Harvard
+%% natbib was deprecated in the 90's - dont use it in future.
+% \bibliography{/Users/kobrien/Documents/Study/Bib_Main}
+\bibliography{sections/fixed/Bib_Main}
+
+
+\clearpage\section{Appendices}
+% \subsection{Register of Files}\label{appendix-A}
+% \input{sections/Appendix/Appendix1.tex}\FloatBarrier
+
+\end{document}
