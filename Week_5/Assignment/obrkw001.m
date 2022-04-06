@@ -235,6 +235,9 @@ figure(4)
 %     title("then reconstructed")
 %     pause(1/10)
 
+%%% Apply smoothing.
+
+
 im_dist      = imcomplement(bwdist(im_recon));
 im_watershed = watershed(im_dist);
 
@@ -274,11 +277,13 @@ end
 imflat=zeros(size(im_label2));
 imflat(im_label2~=0)=1;
 
-SE2 =strel('disk',5);
+SE2 =strel('disk',1);
 % perim = imopen(imflat,SE2);   %% This will remove the entire background,
 % ensuring > 2 pixel border the entire way around.
 perim = ~bwmorph(imflat,'remove');  %% Perhaps this for just a border? seems a bit razzy.
-perim2 = ~bwmorph(perim,'shrink',1);
+
+perim2= ~imerode(perim,SE2);
+% perim2 = ~bwmorph(perim,'shrink',1);
 
 
 num_oranges = max(max(bwlabel(im_label2)));
